@@ -5,7 +5,6 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Regex test
       - run: branchName=${{ github.ref }}
       - run: branchName=$(sed -n "s/^refs/I'm replaced/p")
       - run: echo "Test value is:$branchName"
