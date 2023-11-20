@@ -7,7 +7,7 @@ jobs:
     steps:
       - run: |
               branchName=${{ github.ref }}
-              # branchName=$(sed -n "s/^refs/REPLACED/p")
+              branchName=$(sed "s/^refs/REPLACED")
               echo "Test value is:$branchName"
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
